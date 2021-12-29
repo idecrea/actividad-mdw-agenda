@@ -1,0 +1,165 @@
+
+:root {
+    --color-text: white;
+    --font-text: arial;
+    --button-size: 3rem;
+}
+
+
+/* Animacion */
+
+@keyframes ani-girar {
+   from {
+      transform: rotate(0deg);
+   } to {
+        transform: rotate(360deg);
+        }
+}
+/* Fin Animacion */
+
+/* General */
+
+body {
+    margin: 0;
+    font-family: var(--font-text);
+    color: var(--color-text);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/background.jpg");
+    background-size: cover;
+    background-position: center right;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Fin General */
+
+/* Section info */
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__date {
+    width: 10rem;
+}
+
+.info__temperature {
+    width: 10rem;
+    text-align: right;
+    font-size: 2.5rem;
+}
+
+.info__icon {
+    animation-name: ani-girar;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    display: inline-block;
+}
+
+.info__day-week {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.info__full-date {
+    font-size: .9rem;
+}
+
+
+/* Fin Section info */
+
+
+/* Section hello */
+
+.hello__text {
+    font-size:  1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.8rem;
+}
+
+/* Fin Section hello */
+
+/* Section events */
+
+.events__item {
+    display: flex;
+    align-items: center;
+    grid-gap: .5rem;
+}
+
+.events__description {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-text);
+    flex-grow: 1;
+}
+
+.events__title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.events__subtitle {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.events__time {
+    text-align: center;
+    width: 2.8rem;
+}
+
+.events__hour {
+    display: block;
+    font-size: 2rem;
+}
+
+.events__day-break {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Fin Section events */
+
+/* Section controls */
+
+.controls {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+}
+
+.controls__button {
+    border: 0;
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.controls__button--add {
+    background-color: #02ab6c;
+}
+
+.controls__button--edit {
+    background-color: #a94442;
+}
+
+.controls__button--remove {
+    background-color: #7700aa;
+}
+
+/* Fin Section controls */
